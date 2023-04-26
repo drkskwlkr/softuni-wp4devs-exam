@@ -47,6 +47,7 @@ wp-content/themes/twentytwentythree/
 wp-content/themes/twentytwentytwo/
 
 ### Plugins ###
+/wp-content/plugins/iwp-client/
 /wp-content/db.php
 
 ### Backups Files ###
