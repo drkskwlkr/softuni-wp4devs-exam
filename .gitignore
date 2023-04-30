@@ -48,6 +48,7 @@ wp-content/themes/twentytwentytwo/
 
 ### Plugins ###
 /wp-content/plugins/iwp-client/
+/wp-content/plugins/wp-dummy-content-generator/
 /wp-content/db.php
 
 ### Backups Files ###
