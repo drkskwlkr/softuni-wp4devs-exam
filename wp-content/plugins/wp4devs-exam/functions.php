@@ -21,8 +21,9 @@ add_action( 'wp_ajax_upvote_toon', 'wp4dev_upvote_toon' ) ;
 
 /**
  * Make shortcode that displays wordcount for given article
- * 
  */
+
+ //TODO: Does not work yet :(
 
  function wp4dev_word_count_shortcode($atts) {
   $atts = shortcode_atts(array(
@@ -31,7 +32,8 @@ add_action( 'wp_ajax_upvote_toon', 'wp4dev_upvote_toon' ) ;
 
   $post = get_post( $atts['id'] ) ;
   $content = $post->post_content ;
+  
   $word_count = str_word_count( strip_tags($content) ) ;
-  return $word_count ;
+  return 'Your document contains' . $word_count . 'word(s)' ;
 }
 add_shortcode('word_count', 'wp4dev_word_count_shortcode' );
