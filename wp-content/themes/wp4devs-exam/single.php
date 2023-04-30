@@ -83,11 +83,11 @@
 				<div class="property-image property-image-single">
 					<div class="property-image-box property-image-box-single">
 						<?php
-        		if ( has_post_thumbnail() ) {
-          		the_post_thumbnail();
-        		} else {
-          		echo '<img src="' . get_template_directory_uri() . '/images/bedroom.jpg" alt="property image">' ;
-        		}
+							if ( has_post_thumbnail() ) {
+								the_post_thumbnail();
+							} else {
+								echo '<img src="' . get_template_directory_uri() . '/images/bedroom.jpg" alt="property image">' ;
+							}
       			?>
 
 
