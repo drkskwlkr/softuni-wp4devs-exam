@@ -33,11 +33,11 @@ function softuni_toons_cpt() {
 		'show_in_menu'       => true,
 		'query_var'          => true,
 		'rewrite'            => array( 'slug' => 'toon' ),
-		'capability_type'    => 'page',
+		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => null,
-		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'revisions', 'custom-fields' ),
+		'supports'           => array( 'title', 'thumbnail', 'custom-fields' ),
     'show_in_rest'       => true,
     'menu_icon'          => 'dashicons-nametag'
 	) ;

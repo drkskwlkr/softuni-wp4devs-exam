@@ -45,10 +45,29 @@
 									</div>
 									<div class="property-details-card">
 										<div class="property-details-card-title">
-											<h3>Votes</h3>
+											<h3>Stats</h3>
 										</div>
 										<div class="property-details-card-body">
-											<h3 id="toon-votes">333 likes</h3>
+											<!-- Get page views -->
+											<?php
+												$page_views = intval( get_post_meta( $post->ID, 'page_load_counter', true ) ) ;
+
+												if ( empty ( $page_views ) ) {
+													$page_views = 1 ;
+												}
+											?>
+											<p>Page views: <?php echo $page_views++ ; ?></p>
+											<?php update_post_meta( $post->ID, 'page_load_counter', $page_views ) ; ?>
+
+											<!-- Get page likes -->
+											<?php
+												$page_likes = intval( get_post_meta( $post->ID, 'page_like_counter', true ) ) ;
+
+												if ( empty ( $page_likes ) ) {
+													$page_likes = 1 ;
+												}
+											?>
+											Page likes: <span id="toon-votes"><?php echo $page_likes++ ; ?></span></p>
 											<div><a href="#" class="button button-wide"><?php echo __('Like this Toon', 'softuni') ; ?></a></div>
 										</div>
 									</div>

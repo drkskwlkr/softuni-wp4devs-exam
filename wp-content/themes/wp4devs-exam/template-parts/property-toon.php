@@ -5,19 +5,13 @@
       <!--span class="meta-location">Ovcha Kupel, Sofia</span-->
       <span class="meta-location">
         <?php
-          // $specialties = get_post_custom_values('Facts about this character')[0] ;
-          // if ( null !== $specialties ) {
-          //   $list = explode( '|', $specialties) ;
-          //   echo '<ul class="properties-listing">' ;
-          //   foreach ($list as $list_item) {
-          //     echo '<li class="properties-listing"> ' . esc_html($list_item) . '</li>';
-          //   }
-          //   echo '</ul>' ;
-          // } else {
-          //   echo __('We have no facts about this toon', 'softuni') ;
-          // }
+          $page_views = get_post_meta( get_the_ID(), 'page_load_counter', true ) ;
+          if ( empty ( $page_views ) ) {
+            $page_views = 1 ;
+          }
         ?>
-        <?php the_title(); ?> has <span id="likes-counter">333</span> likes so far.
+
+        <?php the_title(); ?> has <strong><?php echo $page_views ; ?></strong> page views and <strong><span id="likes-counter">333</span></strong> likes so far.
       </span>
       <span class="meta-total-area">
       </span>
