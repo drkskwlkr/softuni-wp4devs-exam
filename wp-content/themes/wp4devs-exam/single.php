@@ -89,8 +89,6 @@
 								echo '<img src="' . get_template_directory_uri() . '/images/bedroom.jpg" alt="property image">' ;
 							}
       			?>
-
-
 						<!--img src="images/bedroom.jpg" alt="property image"-->
 					</div>
 				</div>
@@ -100,6 +98,36 @@
 		</div>
 
 		<h2 class="section-heading">Other similar properties:</h2>
+
+		<ul class="properties-listing">
+		<?php
+
+			$exclude_this = get_the_ID() ;
+
+			$args = array(
+					'numberposts' => 2,
+					'category'		=> 0,
+					'orderby'     => 'date',
+					'order'       => 'DESC',
+					'include'		  => array(),
+					'post__not_in' => array($post->ID),
+					'meta_key'    => '',
+					'meta_value'  => '',
+					'post_type'   => 'post',
+					'suppress_filters' => true,
+			) ;
+			$random_posts = get_posts($args) ;
+			
+			foreach ($random_posts as $post) :
+				setup_postdata($post); ?>
+
+				<?php get_template_part( 'template-parts/property', 'item' ); ?>
+
+			<?php endforeach ;
+			wp_reset_postdata() ; ?>
+		</ul>
+
+		<!--
 		<ul class="properties-listing">
 			<li class="property-card">
 				<div class="property-primary">
@@ -139,5 +167,6 @@
 				</div>
 			</li>
 		</ul>
+		-->
 		
 <?php get_footer(); ?>
