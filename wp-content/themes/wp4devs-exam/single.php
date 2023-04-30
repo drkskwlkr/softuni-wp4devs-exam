@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
 		<div class="property-single">
 			<main class="property-main">
 				<div class="property-card">
