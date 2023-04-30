@@ -30,4 +30,6 @@
           </p>
       <?php endif; ?>
 
+      <div><?php wp_nav_menu( array( 'header-menu' => 'Navigation' ) ) ; ?></div>
+
 		</header>
