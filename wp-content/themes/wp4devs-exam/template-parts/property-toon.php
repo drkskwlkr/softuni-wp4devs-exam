@@ -30,8 +30,9 @@
   <div class="property-image">
     <div class="property-image-box">
       <?php
-        if ( has_post_thumbnail() ) {
-          the_post_thumbnail();
+        if ( has_post_thumbnail() ) { ?>
+          <a href="<?php the_permalink() ; ?>">
+          <?php echo the_post_thumbnail() ;
         } else {
           echo '<img src="' . get_template_directory_uri() . '/images/bedroom.jpg" alt="property image">' ;
         }
