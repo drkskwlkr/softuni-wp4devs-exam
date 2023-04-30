@@ -27,8 +27,8 @@ add_action( 'wp_enqueue_scripts', 'wp4dev_load_css' ) ;
  */
 function softuni_register_nav_menu(){
     register_nav_menus( array(
-        'primary_menu' => __( 'Primary Menu Name', 'softuni' ),
-        'footer_menu'  => __( 'Footer Menu', 'softuni' ),
+        'primary_menu' => __( 'Navigation', 'softuni' ),
+        'footer_menu'  => __( 'Navigation', 'softuni' ),
     ) );
 }
 add_action( 'after_setup_theme', 'softuni_register_nav_menu', 0 );
