@@ -19,7 +19,6 @@
           echo '<img src="' . get_template_directory_uri() . '/images/bedroom.jpg" alt="property image">';
         }
       ?>
-      <!--img src="<?php echo get_template_directory_uri() ; ?>/images/bedroom.jpg" alt="property image"-->
     </div>
   </div>
 </li>
