@@ -1,7 +1,7 @@
 <?php
 
 /**
- * I am not enirely sure if I need these
+ * I am not enirely sure if I need these, esp. the thumbnail size
  */
 add_theme_support( 'post-thumbnails' ) ;
 
