@@ -25,6 +25,15 @@
 											echo __( 'Total area not entered', 'softuni' ) ;
 										}
 									?>
+								</span><br>
+								<span class="meta-price">
+									<?php
+										if( null !== get_post_custom_values( 'Asking Price' )) {
+											echo __( 'Asking Price: ', 'softuni' ) . '€' . number_format( get_post_custom_values( 'Asking Price' )[0], 2, '.', ',') ;
+										} else {
+											echo __( 'Asking price not entered', 'softuni' ) ;
+										}
+									?>
 								</span>
 							</div>
 
