@@ -20,5 +20,15 @@
 	<div class="site-wrapper">
 		<header class="site-header">
 			<!--h1 class="site-title"><a href="#">Properties Offers</a></h1-->
-			<h1 class="site-title"><a href="<?php echo esc_url( get_home_url() ); ?>"><?php bloginfo( 'title' ); ?></a></h1>
+
+      <?php if ( is_home() ) : ?>
+        <h1 class="site-title">
+          <a href="<?php echo esc_url( get_home_url() ); ?>"><?php bloginfo( 'title' ); ?></a>
+        </h1>
+      <?php else : ?>
+          <p class="site-title">
+            <a href="<?php echo esc_url( get_home_url() ); ?>"><?php bloginfo( 'title' ); ?></a>
+          </p>
+      <?php endif; ?>
+
 		</header>
