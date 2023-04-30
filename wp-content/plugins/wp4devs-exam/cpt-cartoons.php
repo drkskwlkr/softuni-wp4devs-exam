@@ -32,7 +32,7 @@ function softuni_Toons_cpt() {
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'Toon' ),
+		'rewrite'            => array( 'slug' => 'toon' ),
 		'capability_type'    => 'page',
 		'has_archive'        => true,
 		'hierarchical'       => false,
