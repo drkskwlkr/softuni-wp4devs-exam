@@ -15,4 +15,5 @@
 /**
  * Register our custom post type
  */
+require 'functions.php' ;
 require 'cpt-cartoons.php' ;

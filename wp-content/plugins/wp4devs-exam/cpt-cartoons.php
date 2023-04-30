@@ -4,8 +4,6 @@
  * We can then vote for them.
  */
 
-
-
  /**
  * Register a custom post type called "Toon".
  *

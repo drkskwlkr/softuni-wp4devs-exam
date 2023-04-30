@@ -21,7 +21,7 @@
           }
         ?>
 
-        <?php the_title(); ?> has <strong><?php echo $page_views ; ?></strong> page views and <strong><span id="likes-counter"><?php echo $page_likes ;?></span></strong> likes so far.
+        <?php the_title(); ?> has <strong><?php echo $page_views ; ?></strong> page views and <strong><span id="<?php echo $post->ID ;?>"><?php echo $page_likes ;?></span></strong> likes so far.
       </span>
       <span class="meta-total-area">
       </span>

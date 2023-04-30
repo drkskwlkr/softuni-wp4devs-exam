@@ -1,12 +1,12 @@
 // JavaScript file
-// console.log( 'hi, the file loads' );
+console.log( 'hi, the file loads' );
 
 jQuery(document).ready(function($) {
   $('.like-button').on('click', function(e){
       e.preventDefault();
-      // console.log( 'clicked' ); // just to be sure
+      console.log( 'clicked' ); // just to be sure
 
-      let job_id = jQuery(this).attr('id') // we'll need this later
+      let toon_id = jQuery(this).attr('id') // we'll need this later
 
       // AJAX Magic
       jQuery.ajax({
