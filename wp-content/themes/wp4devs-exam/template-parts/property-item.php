@@ -8,16 +8,16 @@
         if( null !== get_post_custom_values( 'Location' )) {
           echo get_post_custom_values( 'Location' )[0] ;
         } else {
-          echo 'Location not entered' ;
+          echo __( 'Location not entered', 'softuni' ) ;
         }
         ?>
       </span>
       <span class="meta-total-area">
         <?php
         if( null !== get_post_custom_values( 'Total Area' )) {
-          echo 'Total area: ' . get_post_custom_values( 'Total Area' )[0] . ' sq.m' ;
+          echo __( 'Total area: ', 'softuni' ) . get_post_custom_values( 'Total Area' )[0] . ' sq.m' ;
         } else {
-          echo 'Total area not entered' ;
+          echo __( 'Total area not entered', 'softuni' ) ;
         }
         ?>
       </span>
@@ -26,9 +26,9 @@
       <span class="property-price">
         <?php
           if( null !== get_post_custom_values( 'Asking Price' )) {
-            echo 'Asking Price: €' . number_format( get_post_custom_values( 'Asking Price' )[0], 2, '.', ',') ;
+            echo __( 'Asking Price: €', 'softuni' ) . number_format( get_post_custom_values( 'Asking Price' )[0], 2, '.', ',') ;
           } else {
-            echo 'Asking price not entered' ;
+            echo __( 'Asking price not entered', 'softuni' ) ;
           }
         ?>
       </span>
