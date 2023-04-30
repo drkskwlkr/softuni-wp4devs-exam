@@ -50,7 +50,8 @@
 										<div class="property-details-card-body">
 											<!-- Get page views -->
 											<?php
-												$page_views = intval( get_post_meta( $post->ID, 'page_load_counter', true ) ) ;
+												//$page_views = intval( get_post_meta( $post->ID, 'page_load_counter', true ) ) ;
+												$page_views = get_post_meta( $post->ID, 'page_load_counter', true ) ;
 
 												if ( empty ( $page_views ) ) {
 													$page_views = 1 ;

@@ -2,10 +2,10 @@
   <div class="property-primary">
     <h2 class="property-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
     <div class="property-meta">
-      <!--span class="meta-location">Ovcha Kupel, Sofia</span-->
+
       <span class="meta-location">
         <?php
-          $page_views = get_post_meta( get_the_ID(), 'page_load_counter', true ) ;
+          $page_views = get_post_meta( $post->ID, 'page_load_counter', true ) ;
           if ( empty ( $page_views ) ) {
             $page_views = 1 ;
           }

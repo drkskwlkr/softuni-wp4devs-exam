@@ -8,3 +8,6 @@ This project serves to demonstrate two skills:
 * How to create a plugin from scratch and doing some stuff with it (e.g. register a CPT and do stuff with the content)
 
 As of this update, Part 1 is done. I will be updating the document with further progress.
+
+## Update
+Part 2 is almost done. THere is a 'Toons' CPT which allows visitors to vote for their favorite Disney princess. Only 3 choices because I don't have time, sorry.
