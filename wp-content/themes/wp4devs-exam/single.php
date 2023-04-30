@@ -93,7 +93,19 @@
 					</div>
 				</div>
 				<?php // TODO: Add Likes Counter ?>
-				<a href="#" class="button button-wide">Like the property</a>
+				<!--a href="#" class="button button-wide">Like the property</a-->
+				<div><?php
+					$page_views = get_post_meta( get_the_ID(), 'page_load_counter', true ) ;
+
+					if ( empty ( $page_views ) ) {
+						$page_views = 1 ;
+					}
+
+					echo __('Property views: ', 'softuni') . $page_views++ ;
+					update_post_meta( get_the_ID(), 'page_load_counter', $page_views ) ;
+
+					?>
+				</div>
 			</aside>
 		</div>
 
