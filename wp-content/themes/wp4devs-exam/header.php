@@ -11,7 +11,7 @@
   <title><?php bloginfo( 'title' ); ?></title>
 
 	<!--link rel="stylesheet" href="./css/master.css"-->
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ; ?>/css/master.css">
+	<link rel="stylesheet" href="<?php echo bloginfo( 'stylesheet_directory' ) ; ?>/css/master.css">
 	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
   <?php wp_head(); ?>
