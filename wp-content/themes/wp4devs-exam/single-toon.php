@@ -56,20 +56,20 @@
 												if ( empty ( $page_views ) ) {
 													$page_views = 1 ;
 												}
-											?>
-											<p>Page views: <?php echo $page_views++ ; ?></p>
-											<?php update_post_meta( $post->ID, 'page_load_counter', $page_views ) ; ?>
+												?>
+												<p>Page views: <?php echo $page_views++ ; ?></p>
+												<?php update_post_meta( $post->ID, 'page_load_counter', $page_views ) ; ?>
 
-											<!-- Get page likes -->
-											<?php
-												$page_likes = intval( get_post_meta( $post->ID, 'page_like_counter', true ) ) ;
+												<!-- Get page likes -->
+												<?php
+												$page_likes = get_post_meta( $post->ID, 'page_like_counter', true ) ;
 
 												if ( empty ( $page_likes ) ) {
 													$page_likes = 1 ;
 												}
-											?>
-											Page likes: <span id="toon-votes"><?php echo $page_likes++ ; ?></span></p>
-											<div><a href="#" class="button button-wide"><?php echo __('Like this Toon', 'softuni') ; ?></a></div>
+												?>
+												Page likes: <span id="like-counter"><?php echo $page_likes++ ; ?></span></p>
+											<div><a href="#" class="button button-wide like-button" id="<?php echo $post->ID ; ?>"><?php echo __('Like this Toon', 'softuni') ; ?></a></div>
 										</div>
 									</div>
 								</div>
@@ -104,7 +104,7 @@
 			foreach ($random_posts as $post) :
 				setup_postdata($post); ?>
 
-				<?php get_template_part( 'template-parts/property', 'toon' ); ?>
+				<?php get_template_part( 'template-parts/toon', 'item' ); ?>
 
 			<?php endforeach ;
 			wp_reset_postdata() ; ?>
